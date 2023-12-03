@@ -96,9 +96,9 @@ class LibrispeechASR(datasets.GeneratorBasedBuilder):
     def _split_generators(self, dl_manager):
         # print('1111111111:', _DL_URLS[self.config.name])
         # archive_path = dl_manager.download(_DL_URLS[self.config.name])
-        archive_path = {'dev':'/content/drive/MyDrive/wav2vec2/dataset/data/dev-clean.tar.gz',
-                        'test': '/content/drive/MyDrive/wav2vec2/dataset/data/test-clean.tar.gz',
-                        'train.100':'/content/drive/MyDrive/wav2vec2/dataset/data/train-clean-100.tar.gz'}
+        archive_path = {'dev':'/dataset/data/dev-clean.tar.gz',
+                        'test': '/dataset/data/test-clean.tar.gz',
+                        'train.100':'/dataset/data/train-clean-100.tar.gz'}
         print('2222222222:', archive_path)
         # (Optional) In non-streaming mode, we can extract the archive locally to have actual local audio files:
         local_extracted_archive = dl_manager.extract(archive_path) if not dl_manager.is_streaming else {}
